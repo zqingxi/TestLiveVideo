@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ime.testlivevideo.MainActivity">
+
+
+    <com.tencent.rtmp.ui.TXCloudVideoView
+        android:id="@+id/TXVideoView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <com.ime.rtmp.ui.ImeVideoView
+        android:id="@+id/glViewS"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.93"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/SphereRotation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:text="@string/SphereRotation"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glViewS" />
+
+    <Button
+        android:id="@+id/SphereSpread"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:text="@string/SphereSpread"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/SphereRotation"
+        app:layout_constraintTop_toBottomOf="@+id/glViewS" />
+
+    <Button
+        android:id="@+id/FourClip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:text="@string/FourClip"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/SphereSpread"
+        app:layout_constraintTop_toBottomOf="@+id/glViewS" />
+
+    <Button
+        android:id="@+id/SphereClip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:text="@string/SphereClip"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/FourClip"
+        app:layout_constraintTop_toBottomOf="@+id/glViewS"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+    <Button
+        android:id="@+id/TestImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onTestImage"
+        android:text="@string/picture"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SphereRotation" />
+
+    <Button
+        android:id="@+id/TestVideo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onTestVideo"
+        android:text="@string/video"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/TestImage"
+        app:layout_constraintTop_toBottomOf="@+id/SphereRotation" />
+
+    <Button
+        android:id="@+id/Snapshot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onSnapshot"
+        android:text="@string/Snapshot"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/TestVideo"
+        app:layout_constraintTop_toBottomOf="@+id/SphereRotation" />
+
+    <Button
+        android:id="@+id/Record"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onRecord"
+        android:text="@string/Record"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/Snapshot"
+        app:layout_constraintTop_toBottomOf="@+id/SphereRotation" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="@string/product_name"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/glViewS"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

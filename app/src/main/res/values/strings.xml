@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LiveVideo</string>
+    <string name="SphereRotation">全景</string>
+    <string name="FourClip">四分屏</string>
+    <string name="SphereSpread">二分屏</string>
+    <string name="SphereClip">球型多分屏</string>
+    <string name="picture">测试图片</string>
+    <string name="video">测试视频</string>
+    <string name="Snapshot">截图</string>
+    <string name="Record">录像</string>
+    <string name="product_name">小鹰全景演示专用APP</string>
+</resources>
